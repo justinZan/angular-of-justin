@@ -8,18 +8,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // 路由模块
 import { AppRoutingModule } from './app-routing.module';
+// 当前模块依赖的其他模块
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // 根组件
 import { AppComponent } from './app.component';
-import { ListComponent } from './components/list/list.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 /* @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular 如何编译和启动应用*/
 @NgModule({
   declarations: [ // 配置当前项目运行的组件
-    AppComponent, ListComponent, HeaderComponent, FooterComponent
+    AppComponent
   ],
   imports: [ // 配置当前模块依赖的其他模块
     BrowserModule,

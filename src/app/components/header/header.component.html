@@ -1,1 +1,8 @@
-<p>header works!</p>
+<div class="header">
+  <p>header works!</p>
+  <ul>
+    <li *ngFor="let item of menuList; index as i">
+      {{ item.name }}
+    </li>
+  </ul>
+</div>

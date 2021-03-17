@@ -3,13 +3,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root', // 使用这个组件的名称
-  templateUrl: './app.component.html', // Hmtl
-  styleUrls: ['./app.component.scss'] // Scss
+  template: '<router-outlet></router-outlet>', // Hmtl
 })
 export class AppComponent {
-  title = 'my-first-demo';
 
-  constructor() { // 构造函数
-
-  }
 }
