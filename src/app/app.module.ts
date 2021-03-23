@@ -13,17 +13,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // 根组件
 import { AppComponent } from './app.component';
 
+// 服务
+import { StorageService } from './service/storage.service';
+import { ChartComponent } from './components/chart/chart.component';
+
 /* @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular 如何编译和启动应用*/
 @NgModule({
   declarations: [ // 配置当前项目运行的组件
-    AppComponent
+    AppComponent, ChartComponent
   ],
   imports: [ // 配置当前模块依赖的其他模块
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [], // 配置项目所需要的服务
+  providers: [StorageService], // 配置项目所需要的服务
   bootstrap: [AppComponent] // 指定应用的主视图（称为根组件），通过引导根AppModule来启动应用，这里一般写的是根组件
 })
 

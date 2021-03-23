@@ -1,8 +1,10 @@
 <div class="header">
-  <p>header works!</p>
-  <ul>
-    <li *ngFor="let item of menuList; index as i">
-      {{ item.name }}
-    </li>
-  </ul>
+  <div class="left-box">
+    <h1 (click)="clickHandle()">{{title}}</h1>
+    <ul>
+      <li *ngFor="let item of menuList" [routerLink]="item.routr" routerLinkActive="active">
+        {{item.name}}
+      </li>
+    </ul>
+  </div>
 </div>

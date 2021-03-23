@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
+  public title = 'JUSTINZAN';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  resoleChildData(e) {
+    console.log('---------e', e);
   }
 
 }

@@ -1,9 +1,11 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // 组件
 import { LayoutComponent } from './layout.component';
 import { ListComponent } from '../components/list/list.component';
+import { ChartComponent } from './../components/chart/chart.component';
 
 
 const routes: Routes = [
@@ -12,11 +14,22 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: '',
+        path: 'list',
         component: ListComponent,
         data: {
           preload: true
         }
+      },
+      {
+        path: 'chart',
+        component: ChartComponent,
+        data: {
+          preload: true
+        }
+      },
+      {
+        path: '',
+        redirectTo: 'list'
       }
     ]
   }

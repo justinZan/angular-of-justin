@@ -7,6 +7,9 @@ import { FooterComponent } from './../components/footer/footer.component';
 import { HeaderComponent } from './../components/header/header.component';
 import { LayoutComponent } from './layout.component';
 
+// 组件库
+import { CommonModule } from '@angular/common';
+
 /* @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular 如何编译和启动应用*/
 @NgModule({
   declarations: [ // 配置当前项目运行的组件
@@ -15,7 +18,8 @@ import { LayoutComponent } from './layout.component';
     LayoutComponent
   ],
   imports: [ // 配置当前模块依赖的其他模块
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    CommonModule
   ]
 })
 
