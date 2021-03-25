@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   public menuList: any[] = [{
     id: 1,
     name: '列表',
-    routr: '/layout'
+    routr: '/list'
   }, {
     id: 2,
     name: '统计',

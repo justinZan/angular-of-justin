@@ -6,10 +6,6 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./layout/layout.module').then(mod => mod.LayoutModule),
-  },
-  {
-    path: 'layout',
-    loadChildren: () => import('./layout/layout.module').then(mod => mod.LayoutModule),
   }
 ];
 
