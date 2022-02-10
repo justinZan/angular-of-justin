@@ -19,6 +19,10 @@ export class HeaderComponent implements OnInit {
     id: 2,
     name: '统计',
     routr: '/chart'
+  }, {
+    id: 3,
+    name: 'NGRX',
+    routr: '/ngrx'
   }];
 
   constructor() { }

@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { ListComponent } from '../components/list/list.component';
 import { ChartComponent } from './../components/chart/chart.component';
+import { NgrxComponent } from '../components/ngrx/ngrx.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,13 @@ const routes: Routes = [
       {
         path: 'chart',
         component: ChartComponent,
+        data: {
+          preload: true
+        }
+      },
+      {
+        path: 'ngrx',
+        component: NgrxComponent,
         data: {
           preload: true
         }

@@ -16,17 +16,30 @@ import { AppComponent } from './app.component';
 // 服务
 import { StorageService } from './service/storage.service';
 import { ChartComponent } from './components/chart/chart.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { reducers, metaReducers } from './store';
+import { NgrxComponent } from './components/ngrx/ngrx.component';
 
 
 /* @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular 如何编译和启动应用*/
 @NgModule({
   declarations: [ // 配置当前项目运行的组件
-    AppComponent, ChartComponent
+    AppComponent, ChartComponent, NgrxComponent
   ],
   imports: [ // 配置当前模块依赖的其他模块
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot(),
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [StorageService], // 配置项目所需要的服务
   bootstrap: [AppComponent] // 指定应用的主视图（称为根组件），通过引导根AppModule来启动应用，这里一般写的是根组件

@@ -115,6 +115,7 @@
   },
   "defaultProject": "my-first-demo",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "defaultCollection": "@ngrx/schematics"
   }
 }
