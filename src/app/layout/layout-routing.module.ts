@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout.component';
 import { ListComponent } from '../components/list/list.component';
 import { ChartComponent } from './../components/chart/chart.component';
 import { NgrxComponent } from '../components/ngrx/ngrx.component';
+import { TodosComponent } from '../components/todos/todos.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,13 @@ const routes: Routes = [
       {
         path: 'ngrx',
         component: NgrxComponent,
+        data: {
+          preload: true
+        }
+      },
+      {
+        path: 'todos',
+        component: TodosComponent,
         data: {
           preload: true
         }

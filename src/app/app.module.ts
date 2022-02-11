@@ -23,12 +23,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { reducers, metaReducers } from './store';
 import { NgrxComponent } from './components/ngrx/ngrx.component';
+import { CounterEffects } from './store/effects/counter.effects';
+import { TodosComponent } from './components/todos/todos.component';
 
 
 /* @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular 如何编译和启动应用*/
 @NgModule({
   declarations: [ // 配置当前项目运行的组件
-    AppComponent, ChartComponent, NgrxComponent
+    AppComponent, ChartComponent, NgrxComponent, TodosComponent
   ],
   imports: [ // 配置当前模块依赖的其他模块
     BrowserModule,
@@ -36,7 +38,7 @@ import { NgrxComponent } from './components/ngrx/ngrx.component';
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([CounterEffects]),
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],

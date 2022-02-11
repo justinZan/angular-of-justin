@@ -23,6 +23,10 @@ export class HeaderComponent implements OnInit {
     id: 3,
     name: 'NGRX',
     routr: '/ngrx'
+  },{
+    id: 4,
+    name: 'TODOS',
+    routr: '/todos'
   }];
 
   constructor() { }

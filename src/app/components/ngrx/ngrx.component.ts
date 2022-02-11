@@ -1,4 +1,4 @@
-import { increment, decrement } from './../../store/actions/counter.actions';
+import { increment, decrement, asyncIncrement } from './../../store/actions/counter.actions';
 import { Observable } from 'rxjs';
 import { AppState } from './../../store/index';
 import { Component, OnInit } from '@angular/core';
@@ -28,5 +28,9 @@ export class NgrxComponent implements OnInit {
   decrement() {
     this.store.dispatch(decrement());
   }
+
+  asyncIncrement() {
+    this.store.dispatch(asyncIncrement());
+   }
 
 }

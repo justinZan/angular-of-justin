@@ -1,0 +1,9 @@
+<div class="container">
+  <input #AddTodoInput type="text" placeholder="请在此输入">
+  <ul>
+    <li *ngFor="let todo of todoList | async">
+      {{todo.title}}
+      <button (click)="deleteHandle(todo.id)">Delete</button>
+    </li>
+  </ul>
+</div>

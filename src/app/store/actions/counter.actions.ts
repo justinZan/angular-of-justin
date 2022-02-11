@@ -9,3 +9,7 @@ export const decrement = createAction(
   'decrement'
 );
 
+export const asyncIncrement = createAction(
+  'asyncIncrement'
+);
+
